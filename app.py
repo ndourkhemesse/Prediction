@@ -5,7 +5,7 @@ import numpy as np
 st.title("🩺 Prédiction de la pression artérielle avec XGBoost")
 
 # Charger le modèle
-model = joblib.load('xgb_model.pkl')
+model = joblib.load('xgb_model (3).pkl')
 
 # Dictionnaires et options
 periode_dict = {'Nuit': 0, 'Matin': 1, 'Après-midi': 2, 'Soir': 3}
