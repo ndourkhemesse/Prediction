@@ -2,7 +2,7 @@ import streamlit as st
 import joblib
 import numpy as np
 
-st.title("🩺 Prédiction de la pression artérielle avec XGBoost")
+st.title("🩺 Blood pressure prediction with XGBoost")
 
 # Charger le modèle
 model = joblib.load('xgb_model (3).pkl')
