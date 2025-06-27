@@ -67,15 +67,15 @@ st.markdown("<div class='section-title'>🩺 Paramètres de la séance</div>", u
 col1, col2 = st.columns(2)
 
 with col1:
-    Debit_sang_pompe = st.number_input("💉 Débit sang pompe (ml/min)", value=300.0)
-    UF_H = st.number_input("💧 UF_H (ml)", value=1.5)
-    Debit_eau_dialysat = st.number_input("💧 Débit eau dialysat (ml/min)", value=500.0)
-    PA = st.number_input("📈 PA (mmHg)", value=120.0)
+    Debit_sang_pompe = st.number_input("💉 Débit sang pompe (ml/min)", value=300, step=1, format="%d")
+    UF_H = st.number_input("💧 UF_H (ml)", value=1, step=1, format="%d")
+    Debit_eau_dialysat = st.number_input("💧 Débit eau dialysat (ml/min)", value=500, step=1, format="%d")
+    PA = st.number_input("📈 PA (mmHg)", value=120, step=1, format="%d")
 
 with col2:
-    PV = st.number_input("📉 PV (mmHg)", value=40.0)
-    PTM = st.number_input("📊 PTM (mmHg)", value=200.0)
-    Poul = st.number_input("❤️ Pouls (bpm)", value=70.0)
+    PV = st.number_input("📉 PV (mmHg)", value=40, step=1, format="%d")
+    PTM = st.number_input("📊 PTM (mmHg)", value=200, step=1, format="%d")
+    Poul = st.number_input("❤️ Pouls (bpm)", value=70, step=1, format="%d")
 
 st.markdown("</div>", unsafe_allow_html=True)
 
@@ -127,6 +127,7 @@ if list(features_df.columns) != feature_order:
 else:
     features_df = features_df[feature_order]
     st.write("📦 Données envoyées au modèle :", features_df)
+ #   st.write("📊 Types des colonnes :", features_df.dtypes)
 
 # Prédiction
 if st.button("Prédire"):
