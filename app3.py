@@ -68,9 +68,9 @@ col1, col2 = st.columns(2)
 
 with col1:
     Debit_sang_pompe = st.number_input("💉 Débit sang pompe (ml/min)", value=300, step=1, format="%d")
-    UF_H = st.number_input("💧 UF_H (ml)", value=1, step=1, format="%d")
+    UF_H = st.number_input("💧 UF_H (ml)", value=20, step=1, format="%d")
     Debit_eau_dialysat = st.number_input("💧 Débit eau dialysat (ml/min)", value=500, step=1, format="%d")
-    PA = st.number_input("📈 PA (mmHg)", value=120, step=1, format="%d")
+    PA = st.number_input("📈 PA (mmHg)", value=-80, step=1, format="%d")
 
 with col2:
     PV = st.number_input("📉 PV (mmHg)", value=40, step=1, format="%d")
